@@ -54,6 +54,7 @@ const Input = () => {
       threshold: HarmBlockThreshold.BLOCK_NONE,
     }
   ];
+  
   const genAI = new GoogleGenerativeAI(
     "AIzaSyCpXuKG4nlPYHe0XDtRn0iiW32KbPQTt9o"
   );

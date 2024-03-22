@@ -9,19 +9,25 @@ import "flowbite";
 
 import Summarise from './components/Summarise';
 import Citations from './components/Citations';
+import FIRForm from "./components/FIR";
+import Login from "./components/Login";
+import Register from "./components/Register";
+// import LeaseDeedForm from "./components/LeaseDeed";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Input />
+      {/* <Input /> */}
       {/* <Citations /> */}
       {/* <GMaps /> */}
       {/* <Leaflet /> */}
       {/* <Summarise /> */}
       <BrowserRouter>
         <Routes>
-          <Route exact path="/template" element={<FIR />} />
+          <Route exact path="/template" element={<FIRForm />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </div>
