@@ -11,7 +11,7 @@ const Template = () => {
       <div class="grid sm:grid-cols-2 sm:gap-4 sm:h-full p-6 grid-cols-1 h-auto gap-10">
         {/* Lease Deed */}
         <div class="bg-slate-200 p-4 h-80 hover:shadow-xl rounded-xl flex flex-col gap-5 sm:gap-10">
-          <p class="text-5xl font-black text-blue-500 text-center dark:text-white">
+          <p class="text-5xl font-semibold text-blue-500 text-center dark:text-white">
             Lease Deed
           </p>
           <blockquote>
@@ -23,8 +23,8 @@ const Template = () => {
             rent payments
           </blockquote>
           <button
-            data-modal-target="authentication-modal"
-            data-modal-toggle="authentication-modal"
+            data-modal-target="authentication-modal-lease"
+            data-modal-toggle="authentication-modal-lease"
             class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button"
           >
@@ -32,7 +32,7 @@ const Template = () => {
           </button>
 
           <div
-            id="authentication-modal"
+            id="authentication-modal-lease"
             tabindex="-1"
             aria-hidden="true"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
@@ -46,7 +46,7 @@ const Template = () => {
                   <button
                     type="button"
                     class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                    data-modal-hide="authentication-modal"
+                    data-modal-hide="authentication-modal-lease"
                   >
                     <svg
                       class="w-3 h-3"
@@ -75,7 +75,7 @@ const Template = () => {
         </div>
         {/* FIR */}
         <div class="bg-slate-200 p-4 h-80 hover:shadow-xl rounded-xl flex flex-col gap-5 sm:gap-10">
-          <p class="text-5xl font-black text-blue-500 text-center dark:text-white">
+          <p class="text-5xl font-semibold text-blue-500 text-center dark:text-white">
             FIR
           </p>
           <blockquote>
@@ -87,8 +87,8 @@ const Template = () => {
             can start an investigation.
           </blockquote>
           <button
-            data-modal-target="authentication-modal"
-            data-modal-toggle="authentication-modal"
+            data-modal-target="authentication-modal-fir"
+            data-modal-toggle="authentication-modal-fir"
             class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button"
           >
@@ -96,7 +96,7 @@ const Template = () => {
           </button>
 
           <div
-            id="authentication-modal"
+            id="authentication-modal-fir"
             tabindex="-1"
             aria-hidden="true"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
@@ -110,7 +110,7 @@ const Template = () => {
                   <button
                     type="button"
                     class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                    data-modal-hide="authentication-modal"
+                    data-modal-hide="authentication-modal-fir"
                   >
                     <svg
                       class="w-3 h-3"
@@ -139,7 +139,7 @@ const Template = () => {
         </div>
         {/* Property Transfer */}
         <div class="bg-slate-200 p-4 h-80 hover:shadow-xl rounded-xl flex flex-col gap-5 sm:gap-10">
-          <p class="text-5xl font-black text-blue-500 text-center dark:text-white">
+          <p class="text-5xl font-semibold text-blue-500 text-center dark:text-white">
             Property Transfers
           </p>
           <blockquote>
@@ -150,8 +150,8 @@ const Template = () => {
             another (the buyer or transferee).
           </blockquote>
           <button
-            data-modal-target="authentication-modal"
-            data-modal-toggle="authentication-modal"
+            data-modal-target="authentication-modal-property"
+            data-modal-toggle="authentication-modal-property"
             class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button"
           >
@@ -159,7 +159,7 @@ const Template = () => {
           </button>
 
           <div
-            id="authentication-modal"
+            id="authentication-modal-property"
             tabindex="-1"
             aria-hidden="true"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
@@ -173,7 +173,7 @@ const Template = () => {
                   <button
                     type="button"
                     class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                    data-modal-hide="authentication-modal"
+                    data-modal-hide="authentication-modal-property"
                   >
                     <svg
                       class="w-3 h-3"
@@ -202,7 +202,7 @@ const Template = () => {
         </div>
         {/* Name change */}
         <div class="bg-slate-200 p-4 h-80 hover:shadow-xl rounded-xl flex flex-col gap-5 sm:gap-10">
-          <p class="text-5xl font-black text-blue-500 text-center dark:text-white">
+          <p class="text-5xl font-semibold text-blue-500 text-center dark:text-white">
             Name Change
           </p>
           <blockquote>
@@ -212,8 +212,8 @@ const Template = () => {
             vary by region and the governing legal system.
           </blockquote>
           <button
-            data-modal-target="authentication-modal"
-            data-modal-toggle="authentication-modal"
+            data-modal-target="authentication-modal-namechange"
+            data-modal-toggle="authentication-modal-namechange"
             class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button"
           >
@@ -221,7 +221,7 @@ const Template = () => {
           </button>
 
           <div
-            id="authentication-modal"
+            id="authentication-modal-namechange"
             tabindex="-1"
             aria-hidden="true"
             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
@@ -235,7 +235,7 @@ const Template = () => {
                   <button
                     type="button"
                     class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                    data-modal-hide="authentication-modal"
+                    data-modal-hide="authentication-modal-namechange"
                   >
                     <svg
                       class="w-3 h-3"
