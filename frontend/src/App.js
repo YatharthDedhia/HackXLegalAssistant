@@ -1,8 +1,12 @@
-import './App.css';
+import "./App.css";
 import GMaps from './components/GMaps';
 import Leaflet from './components/LeafLet';
-import Navbar from './components/Navbar';
-import "flowbite"
+import Navbar from "./components/Navbar";
+import Input from "./components/Input";
+import FIR from "./components/FIR";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import "flowbite";
+
 import Summarise from './components/Summarise';
 import Citations from './components/Citations';
 
