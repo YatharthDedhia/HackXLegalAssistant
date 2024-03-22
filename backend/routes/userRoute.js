@@ -28,17 +28,14 @@ router.route("/me")
     .get(isAuthenticatedUser, userController.getUserDetails);
 
 router.route("/admin/users")
-    .get(isAuthenticatedUser, authorizeRoles("admin"), userController.getAllUser);
+    .get(userController.getAllUser);
 
 router.route("/admin/user/:id")
     .get(isAuthenticatedUser, authorizeRoles("admin"), userController.getUserbyType)
     // .put(isAuthenticatedUser, authorizeRoles("admin"), userController.updateUserRole)
     // .delete(isAuthenticatedUser, authorizeRoles("admin"), userController.deleteUser);
 
-router.route("/lawyerlist/:id")
-    .get(isAuthenticatedUser, userController.getUserbyType)
-
-
-    
+router.route("/lawyerlist")
+    .post(userController.getUserbyField)    
 
 module.exports = router;

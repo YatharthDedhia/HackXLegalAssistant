@@ -5,28 +5,28 @@ const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 
 const userSchema = new mongoose.Schema({
-    firstname: {
-        type: String,
-        required: true
-    },
-    lastname: {
-        type: String,
-        required: true
-    },
-    startyr: {
-        type: Number,
-        required: true
-    },
-    city: {
-        type: String,
-        required: true
-    },
-    court_type:{
-        type: String,
-    },
-    mobile_no:{
-        type:String
-    },
+    // firstname: {
+    //     type: String,
+    //     required: true
+    // },
+    // lastname: {
+    //     type: String,
+    //     required: true
+    // },
+    // startyr: {
+    //     type: Number,
+    //     required: true
+    // },
+    // city: {
+    //     type: String,
+    //     required: true
+    // },
+    // court_type:{
+    //     type: String,
+    // },
+    // mobile_no:{
+    //     type:String
+    // },
 
     email: {
         type: String,
@@ -43,13 +43,13 @@ const userSchema = new mongoose.Schema({
         default: "General"
     },
 
-    gender: {
-        type: String,
-    },
-    dob: {
-        type: Date,
-        default: Date.now,
-    },
+    // gender: {
+    //     type: String,
+    // },
+    // dob: {
+    //     type: Date,
+    //     default: Date.now,
+    // },
     resetPasswordToken: String,
     resetPasswordExpire: Date,
 })

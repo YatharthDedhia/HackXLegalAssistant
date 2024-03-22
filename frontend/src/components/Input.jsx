@@ -57,7 +57,7 @@ const Input = () => {
       threshold: HarmBlockThreshold.BLOCK_NONE,
     },
   ];
-  
+
   const genAI = new GoogleGenerativeAI(
     "AIzaSyCpXuKG4nlPYHe0XDtRn0iiW32KbPQTt9o"
   );
@@ -123,33 +123,19 @@ const Input = () => {
           analysis, and timeline creation in minutes—with results you can trust.
         </p>
       </div>
-      {/* <div class="mb-6 sm:flex sm:flex-row sm:w-full flex flex-col gap-10 w-full mx-12  mt-10 ">
+      <div class="mb-6 sm:flex sm:flex-row sm:w-full flex flex-col gap-10 sm:mx-auto mt-10 ">
         <textarea
           type="text"
           id="default-input"
-          class="bg-gray-300  text-gray-900 text-md  rounded-xl sm:w-5/12 w-10/12 h-md border border-10 border-blue-500 dark:bg-gray-700 dark:text-white dark:border-blue-500 shadow-xl"
+          class="bg-gray-300 text-gray-900 text-md rounded-xl sm:w-5/12 w-full h-md border border-10 border-blue-500 dark:bg-gray-700 dark:text-white dark:border-blue-500 shadow-xl"
           placeholder="Enter Case Details..."
           value={caseInput}
           onChange={(e) => setCaseInput(e.target.value)}
-        />
-        <div className="output-field bg-gray-300 border border-10 border-blue-500 text-gray-900 text-md rounded-xl sm:w-5/12 w-10/12  block p-3 dark:bg-gray-700  dark:text-white dark:border-blue-500 overflow-y-auto h-56 text-left">
+        ></textarea>
+        <div class="output-field bg-gray-300 border border-10 border-blue-500 text-gray-900 text-md rounded-xl sm:w-5/12 w-full block p-3 dark:bg-gray-700 dark:text-white dark:border-blue-500 overflow-y-auto h-56 text-left">
           <ReactMarkdown>{apiData}</ReactMarkdown>
         </div>
-      </div> */}
-      <div class="mb-6 sm:flex sm:flex-row sm:w-full flex flex-col gap-10 sm:mx-auto mt-10 ">
-    <textarea
-      type="text"
-      id="default-input"
-      class="bg-gray-300 text-gray-900 text-md rounded-xl sm:w-5/12 w-full h-md border border-10 border-blue-500 dark:bg-gray-700 dark:text-white dark:border-blue-500 shadow-xl"
-      placeholder="Enter Case Details..."
-      value={caseInput}
-      onChange={(e) => setCaseInput(e.target.value)}
-    ></textarea>
-    <div class="output-field bg-gray-300 border border-10 border-blue-500 text-gray-900 text-md rounded-xl sm:w-5/12 w-full block p-3 dark:bg-gray-700 dark:text-white dark:border-blue-500 overflow-y-auto h-56 text-left">
-      <ReactMarkdown>{apiData}</ReactMarkdown>
-    </div>
-</div>
-
+      </div>
       <button
         class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800"
         onClick={(e) => {

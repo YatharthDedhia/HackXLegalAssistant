@@ -6,15 +6,13 @@ const sendToken = require('../utils/jwttoken');
 const sendEmail = require('../utils/sendEmail');
 const crypto = require("crypto");
 const bcrypt = require("bcrypt")
-const jsbarcode = require("jsbarcode");
-const { createCanvas } = require('canvas');
 
 
 // Register user
 const registerUser = catchAsyncErrors(async (req, res, next) => {
-    const { firstname, lastname, startyr, city, court_type, mobile_no, email, password, type, gender, dob } = req.body;
-
-    if (!firstname || !lastname || !startyr || !city || !court_type || !password || !mobile_no || !email || !type || !gender || !dob){
+    const { email, password, type } = req.body;
+    console.log(email)
+    if (!password || !email || !type) {
         return next(new errorHandler("All fields required", 400))
     }
 
@@ -23,27 +21,15 @@ const registerUser = catchAsyncErrors(async (req, res, next) => {
         return next(new errorHandler("User already present", 409))
     }
 
-    const HashedPwd = await bcrypt.hash(password, 10) //salt rounds
-
-    const canvas = createCanvas();
-    jsbarcode(canvas, HashedPwd, { format: 'CODE39' });
-    const barcodeDataUrl = canvas.toDataURL();
+    const HashedPwd = await bcrypt.hash(password, 10)
 
     const user = await User.create({
-        firstname, lastname,
-        startyr, city, court_type,mobile_no,
         email,
         "password": HashedPwd,
-        type, gender,        
-        dob
+        type
     });
     console.log(user)
 
-    const account = await Account.create({
-        "user": user._id,
-
-    });
-    console.log(account);
     sendToken(user, 201, res);
 });
 
@@ -304,6 +290,23 @@ const getUserbyType = catchAsyncErrors(async (req, res, next) => {
         user,
     })
 })
+
+const getUserbyField = catchAsyncErrors(async (req, res, next) => {
+    const {type } = req.body;
+    console.log(type)
+    // Using find method with a query object to search by type
+    const users = await User.find({ type });
+    console.log(users)
+    if (!users || users.length === 0) {
+        return next(new errorHandler(`Users not found with type: ${type}`, 404));
+    }
+
+    res.status(200).json({
+        success: true,
+        users,
+    });
+});
+
 module.exports = {
     registerUser,
     loginUser,
@@ -318,5 +321,6 @@ module.exports = {
     getSingleUser,
     updateUserRole,
     deleteUser,
-    getUserInfo
+    getUserInfo,
+    getUserbyField
 }
