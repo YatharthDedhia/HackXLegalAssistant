@@ -14,10 +14,16 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Input />
+      {/* <Citations /> */}
       {/* <GMaps /> */}
       {/* <Leaflet /> */}
       {/* <Summarise /> */}
-      <Citations />
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/template" element={<FIR />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
