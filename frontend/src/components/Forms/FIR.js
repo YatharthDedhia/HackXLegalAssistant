@@ -82,7 +82,7 @@ const FIRForm = () => {
   ];
 
   const genAI = new GoogleGenerativeAI(
-    "AIzaSyCpXuKG4nlPYHe0XDtRn0iiW32KbPQTt9o"
+    ""
   );
 
   const anthropic = new Anthropic({
