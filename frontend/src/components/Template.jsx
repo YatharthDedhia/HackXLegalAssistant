@@ -11,7 +11,7 @@ const Template = () => {
       <div class="grid sm:grid-cols-2 sm:gap-4 sm:h-full p-6 grid-cols-1 h-auto gap-10">
         {/* Lease Deed */}
         <div class="bg-slate-200 p-4 h-80 hover:shadow-xl rounded-xl flex flex-col gap-5 sm:gap-10">
-          <p class="text-5xl font-black text-blue-500 text-center dark:text-white">
+          <p class="text-5xl font-semibold text-blue-500 text-center dark:text-white">
             Lease Deed
           </p>
           <blockquote>
@@ -75,7 +75,7 @@ const Template = () => {
         </div>
         {/* FIR */}
         <div class="bg-slate-200 p-4 h-80 hover:shadow-xl rounded-xl flex flex-col gap-5 sm:gap-10">
-          <p class="text-5xl font-black text-blue-500 text-center dark:text-white">
+          <p class="text-5xl font-semibold text-blue-500 text-center dark:text-white">
             FIR
           </p>
           <blockquote>
@@ -139,7 +139,7 @@ const Template = () => {
         </div>
         {/* Property Transfer */}
         <div class="bg-slate-200 p-4 h-80 hover:shadow-xl rounded-xl flex flex-col gap-5 sm:gap-10">
-          <p class="text-5xl font-black text-blue-500 text-center dark:text-white">
+          <p class="text-5xl font-semibold text-blue-500 text-center dark:text-white">
             Property Transfers
           </p>
           <blockquote>
@@ -202,7 +202,7 @@ const Template = () => {
         </div>
         {/* Name change */}
         <div class="bg-slate-200 p-4 h-80 hover:shadow-xl rounded-xl flex flex-col gap-5 sm:gap-10">
-          <p class="text-5xl font-black text-blue-500 text-center dark:text-white">
+          <p class="text-5xl font-semibold text-blue-500 text-center dark:text-white">
             Name Change
           </p>
           <blockquote>
